@@ -1,50 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Elimuhub AI Search Bookmarklet</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2em;
-      background: #f9f9f9;
-      color: #222;
-    }
-    h2 {
-      color: #cc0000;
-    }
-    a.bookmarklet {
-      display: inline-block;
-      padding: 10px 16px;
-      background-color: #cc0000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    a.bookmarklet:hover {
-      background-color: #990000;
-    }
-    p.note {
-      margin-top: 1em;
-      font-size: 0.9em;
-      color: #555;
-    }
-  </style>
+  <title>Enhanced AI Search Bookmarklet</title>
 </head>
 <body>
-  <h2>📌 Drag This to Your Bookmarks Bar</h2>
-
-  <a class="bookmarklet" href="javascript:(function(){
-    const query = prompt('🔍 Search Term:');
-    if(query){
-      const encoded = encodeURIComponent(query);
-      const url = 'https://kibzgithub7407.github.io/enhanced-via-ai-switcher/index.html?q=' + encoded;
-      window.open(url, '_blank');
-    }
-  })();">Elimuhub AI Search</a>
-
-  <p class="note">This bookmark opens the <strong>Elimuhub AI Multi-Search Switcher</strong> with your entered search term across platforms like Google, ChatGPT, Perplexity, Bing AI, Claude, and Gemini.</p>
+  <h2>📌 Drag to your bookmarks:</h2>
+  <a href="javascript:(function(){window.location.href='https://kibzgithub7407.github.io/enhanced-via-ai-switcher/index.html?q='+encodeURIComponent(prompt('Search term:'));})();">
+    Enhanced AI Search
+  </a>
 </body>
 </html>
