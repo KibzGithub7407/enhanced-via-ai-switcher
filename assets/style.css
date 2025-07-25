@@ -1,0 +1,20 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+}
+h1 {
+  color: #d60000;
+}
+.engine-button {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.engine-button:hover {
+  background-color: #d60000;
+}
