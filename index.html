@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>🔍 Elimuhub AI Search Switcher</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elimuhub AI & Search Switcher</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🔍 Elimuhub AI Search Switcher</h1>
-  <p>Search once on Google, then click any AI to continue:</p>
-  <div id="switcher-panel"></div>
+  <header>
+    <h1>🔍 Elimuhub AI & Search Switcher</h1>
+    <p>Switch instantly between AI and traditional search engines</p>
+    <input type="text" id="queryInput" placeholder="Type your search..." />
+  </header>
 
-  <script src="scripts/switcher.js"></script>
+  <main>
+    <section>
+      <h2>💡 AI-Powered Search</h2>
+      <div class="button-group">
+        <a class="btn" href="#" data-url="https://chat.openai.com/search?q=">ChatGPT</a>
+        <a class="btn" href="#" data-url="https://perplexity.ai/search?q=">Perplexity AI</a>
+        <a class="btn" href="#" data-url="https://you.com/search?q=">You.com</a>
+        <a class="btn" href="#" data-url="https://phind.com/search?q=">Phind (Dev)</a>
+        <a class="btn" href="#" data-url="https://huggingface.co/search/full-text?q=">HuggingFace</a>
+        <a class="btn" href="#" data-url="https://andisearch.com/search?q=">Andi</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🌐 Popular General-Purpose Search Engines</h2>
+      <div class="button-group">
+        <a class="btn" href="#" data-url="https://www.google.com/search?q=">Google</a>
+        <a class="btn" href="#" data-url="https://www.bing.com/search?q=">Bing</a>
+        <a class="btn" href="#" data-url="https://search.yahoo.com/search?p=">Yahoo!</a>
+        <a class="btn" href="#" data-url="https://yandex.com/search/?text=">Yandex</a>
+        <a class="btn" href="#" data-url="https://www.baidu.com/s?wd=">Baidu</a>
+        <a class="btn" href="#" data-url="https://www.ecosia.org/search?q=">Ecosia</a>
+        <a class="btn" href="#" data-url="https://search.aol.com/aol/search?q=">AOL</a>
+        <a class="btn" href="#" data-url="https://www.ask.com/web?q=">Ask.com</a>
+        <a class="btn" href="#" data-url="https://www.naver.com/search.naver?query=">Naver</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🛡️ Privacy-Focused Search Engines</h2>
+      <div class="button-group">
+        <a class="btn" href="#" data-url="https://duckduckgo.com/?q=">DuckDuckGo</a>
+        <a class="btn" href="#" data-url="https://startpage.com/do/search?q=">StartPage</a>
+        <a class="btn" href="#" data-url="https://searx.org/search?q=">Searx</a>
+        <a class="btn" href="#" data-url="https://search.brave.com/search?q=">Brave Search</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🔗 Built by Elimuhub • <a href="https://github.com/KibzGithub7407">GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
