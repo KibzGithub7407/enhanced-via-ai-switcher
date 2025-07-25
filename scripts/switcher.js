@@ -3,64 +3,51 @@ const encoded = encodeURIComponent(query);
 
 const categories = [
   {
-    title: "🌐 General Purpose Search Engines",
-    engines: [
-      { name: "🔎 Google", url: `https://www.google.com/search?q=${encoded}` },
-      { name: "🌍 Bing", url: `https://www.bing.com/search?q=${encoded}` },
-      { name: "📩 Yahoo!", url: `https://search.yahoo.com/search?p=${encoded}` },
-      { name: "🌱 Ecosia", url: `https://www.ecosia.org/search?q=${encoded}` },
-      { name: "🔍 AOL", url: `https://search.aol.com/aol/search?q=${encoded}` },
-      { name: "❓ Ask.com", url: `https://www.ask.com/web?q=${encoded}` }
-    ]
-  },
-  {
-    title: "🔒 Privacy-Focused Search Engines",
-    engines: [
-      { name: "🕵️ DuckDuckGo", url: `https://duckduckgo.com/?q=${encoded}` },
-      { name: "🚫 Swisscows", url: `https://swisscows.com/web?query=${encoded}` },
-      { name: "🛡️ Mojeek", url: `https://www.mojeek.com/search?q=${encoded}` },
-      { name: "👻 Startpage", url: `https://www.startpage.com/do/dsearch?query=${encoded}` }
-    ]
-  },
-  {
-    title: "🤖 AI-Powered Assistants",
+    title: "AI Tools",
     engines: [
       { name: "💬 ChatGPT", url: `https://chat.openai.com/?q=${encoded}` },
-      { name: "🔮 Gemini", url: `https://gemini.google.com/app?q=${encoded}` },
-      { name: "🧠 Claude AI", url: `https://claude.ai/chat?q=${encoded}` },
-      { name: "🤔 Perplexity AI", url: `https://www.perplexity.ai/search?q=${encoded}` },
-      { name: "🔗 You.com", url: `https://you.com/search?q=${encoded}` }
+      { name: "🤖 Perplexity", url: `https://www.perplexity.ai/search?q=${encoded}` },
+      { name: "🌐 Bing AI", url: `https://www.bing.com/search?q=${encoded}` },
+      { name: "🧠 Claude", url: `https://claude.ai/chat?q=${encoded}` },
+      { name: "🔮 Gemini", url: `https://gemini.google.com/app?q=${encoded}` }
     ]
   },
   {
-    title: "🌏 Regional Search Engines",
+    title: "General-Purpose Search Engines",
     engines: [
-      { name: "🇨🇳 Baidu (China)", url: `https://www.baidu.com/s?wd=${encoded}` },
-      { name: "🇷🇺 Yandex (Russia)", url: `https://yandex.com/search/?text=${encoded}` },
-      { name: "🇰🇷 Naver (Korea)", url: `https://search.naver.com/search.naver?query=${encoded}` }
+      { name: "🔎 Google", url: `https://www.google.com/search?q=${encoded}` },
+      { name: "🌐 Bing", url: `https://www.bing.com/search?q=${encoded}` },
+      { name: "🟣 Yahoo!", url: `https://search.yahoo.com/search?p=${encoded}` },
+      { name: "🟠 Yandex", url: `https://yandex.com/search/?text=${encoded}` },
+      { name: "🔵 Baidu", url: `https://www.baidu.com/s?wd=${encoded}` },
+      { name: "🦆 DuckDuckGo", url: `https://duckduckgo.com/?q=${encoded}` },
+      { name: "🌱 Ecosia", url: `https://www.ecosia.org/search?q=${encoded}` },
+      { name: "🟢 AOL Search", url: `https://search.aol.com/aol/search?q=${encoded}` },
+      { name: "❓ Ask.com", url: `https://www.ask.com/web?q=${encoded}` },
+      { name: "🇰🇷 Naver", url: `https://search.naver.com/search.naver?query=${encoded}` }
     ]
   },
   {
-    title: "🧓 Legacy / Specialized",
+    title: "Privacy-Focused Search Engines",
     engines: [
-      { name: "📘 Internet Archive", url: `https://archive.org/search.php?query=${encoded}` },
-      { name: "📚 Google Scholar", url: `https://scholar.google.com/scholar?q=${encoded}` },
-      { name: "🔬 WolframAlpha", url: `https://www.wolframalpha.com/input/?i=${encoded}` }
+      { name: "🦆 DuckDuckGo", url: `https://duckduckgo.com/?q=${encoded}` },
+      { name: "🛡️ Startpage", url: `https://www.startpage.com/sp/search?query=${encoded}` },
+      { name: "🔒 Qwant", url: `https://www.qwant.com/?q=${encoded}` },
+      { name: "🦁 Brave Search", url: `https://search.brave.com/search?q=${encoded}` },
+      { name: "🌲 Mojeek", url: `https://www.mojeek.com/search?q=${encoded}` }
     ]
   }
 ];
 
-// Render categories and buttons
 const container = document.getElementById("switcher-panel");
-categories.forEach(category => {
+categories.forEach(cat => {
   const section = document.createElement("div");
-  section.className = "category";
-
-  const heading = document.createElement("h3");
-  heading.textContent = category.title;
+  section.className = "category-section";
+  const heading = document.createElement("h2");
+  heading.textContent = cat.title;
   section.appendChild(heading);
 
-  category.engines.forEach(engine => {
+  cat.engines.forEach(engine => {
     const btn = document.createElement("a");
     btn.href = engine.url;
     btn.textContent = engine.name;
